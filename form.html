@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script src="js/jquery.validate.min.js"></script>
+</head>
+<body>
+	<div class="topbar">
+		<div class="row">
+			<div class="col-12 no-padding">
+				<ul class="menu">
+					<li><a href="index.html">Kezdőlap</a></li>
+					<li><a href="table.html">Árlista</a></li>
+					<li><a class="active" href="form.html">Adatok</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<div class="row" >
+		<form action="index.html" method="get" id="ellenorzes">
+			<div class="col-12">
+				<label>Neved:</label>
+				<input type="text" name="nev" value="" data-rule-minlength="2" placeholder="Hogy hívnak?" required>
+			</div>
+			<div class="col-12">
+				<label>Korod:</label>
+				<input type="text" name="age" value="" placeholder="Hány éves vagy?" required data-rule-number=”true”>
+			</div>
+			<div class="col-3">
+				<input type="submit" value="Küldés">
+			</div>
+		</form>
+	</div>
+	<script>
+		$("#ellenorzes").validate();
+	</script>
+</body>
+</html>
